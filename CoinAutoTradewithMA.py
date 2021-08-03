@@ -49,7 +49,7 @@ while True:
         start_time = get_start_time("KRW-BTC") # 시작시간 9:00
         end_time = start_time + datetime.timedelta(days=1) # 9시에서 1일을 더해준 값
 
-        if start_time < now < end_time - datetime.timedelta(seconds=3600): # 마지막 시간에서 3600초(1시간)를 빼줌
+        if start_time < now < end_time - datetime.timedelta(seconds=7200): # 마지막 시간에서 3600초(1시간)를 빼줌
             target_price = get_target_price("KRW-BTC", 0.5) #목표가격 설정
             ma15 = get_ma15("KRW-BTC")
             current_price = get_current_price("KRW-BTC") # 현재가격
